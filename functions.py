@@ -29,6 +29,10 @@ result2 = greeting("Justin")
 print("result2:", result2)
 
 
+
+
+
+
 print("===== Keyword & default Argument =====")
 # DEFINE
 
@@ -46,3 +50,23 @@ print("result3:", result3)
 
 result4 = give_greet("John")
 print("result4:", result4)
+
+
+
+
+
+print("===== Scope =====") 
+# variable qayerda ishlashi mumkinligi.
+
+b = 100   #3 global dan qidiradi
+
+
+# DEFINE
+def calculation(a, b):  #2 parametrdan qidiradi
+    c = a * b   #1 function ichidan qidiradi
+    print(f"the c value: {c}")
+
+
+
+# CALL
+calculation(3, 5)
