@@ -61,3 +61,5 @@ print("The FALSY:", bool(test_falsy))
 
 test_truthy = "MIT"    
 print("The TRUTHY:", bool(test_truthy))
+
+
