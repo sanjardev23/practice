@@ -15,6 +15,7 @@ print(result1, result2)
 
 
 
+
 print("===== string ======")
 # METHODS: upper() lower() little() find() replace()
 
@@ -35,3 +36,28 @@ print(course)
 
 
 
+
+print("===== boolean ======")
+# functions > type() input() bool() int() str() 
+y = input("Give your value for y: ")
+print("y:", y)
+
+result = y.isnumeric()
+print(f"The input value is numeric: {result}")
+
+
+
+
+
+
+# TRUTHY vs FALSY value
+# TRUTHY:  True 100 -100 "MIT"
+# FALSY:   False 0 "" None
+
+
+test_falsy = "" or False or None or 0     # if one true in "or", all become true 
+print("The FALSY:", bool(test_falsy))
+
+
+test_truthy = "MIT"    
+print("The TRUTHY:", bool(test_truthy))
