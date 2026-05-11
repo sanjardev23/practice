@@ -21,6 +21,7 @@ def greeting(b):
     return f"Hi {b}!"
 
 
+
 # CALL - argument (execute)
 result1 = great("SIMON")
 print("result1:", result1)
