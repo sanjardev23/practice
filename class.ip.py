@@ -5,11 +5,10 @@
 '''
 
 
-
-
 print("==== INHERITANCE ====")
 # PARENT > CHILD (method va state`larni meros qilib olish)
 # PARENT only provides public and protected proporties( state + method) to CHILD, but not private ones
+
 
 class Animal:  # PARENT class
     # state
@@ -42,6 +41,9 @@ class Dog(Animal):
 
     def protect(self):
         print("Yes, I can protect you!")
+
+    def make_voice(self):
+        print(f"The {self.name} says: {self.sound}")
 
 
 class Cat(Animal):
@@ -104,3 +106,33 @@ print(dog.voice, fish.voice)
 print("dog status:", dog._status)
 print("cat status:", cat._status)
 print("fish status:", fish._status)
+
+
+
+
+
+
+
+print("==== POLIMORPHISM ====")
+# Polimorphism > bir nechta classlarda bir xil nomdagi methodni turli xil ishlashi
+
+
+dog.make_voice()
+cat.make_voice()
+fish.make_voice()
+
+
+print("------")
+# fish > Fish > Animal > Object
+a = isinstance(fish, Fish)  # True
+b = isinstance(fish, Animal)  # True
+c = isinstance(fish, object)  # True
+d = isinstance("MIT", object)  # True
+result = a and b and c and d
+print(f"The result: {result}")
+
+
+# Fish > Animal > Object
+data = issubclass(Fish, Animal)  # True
+data2 = issubclass(Animal, object)  # True
+print("data:", data, data2)8
