@@ -8,9 +8,6 @@ print("======= TUPLES =======")
 # Jva/PHP/NodeJS > array => Python list, array
 
 
-
-
-
 # literal
 nums = [3, 5, 1, 2, 4]
 print(nums)
@@ -22,15 +19,19 @@ print(letters)
 # person_dict = dict(name="Alice", age=30) # this is a dict, made in constructor way
 
 
-fruits = ["apple", "banana", "cherry"]     # this is a list, made in literal way
+# this is a list, made in literal way
+fruits = ["apple", "banana", "cherry"]
 print("before fruits:", fruits)
 
-fruits[2] = "melon"                        # this is a list, mutable, we can change the value of an element
+# this is a list, mutable, we can change the value of an element
+fruits[2] = "melon"
 print("after fruits:", fruits)
 
 
-animal_tuple = ("cat", "dog", "rabbit")         # this is a tuple, made in literal way
-tupple_obj = ("MIT", 100, True, None)          # this is a tuple, made in literal way, we can put different types of data in a tuple
+# this is a tuple, made in literal way
+animal_tuple = ("cat", "dog", "rabbit")
+# this is a tuple, made in literal way, we can put different types of data in a tuple
+tupple_obj = ("MIT", 100, True, None)
 
 print(animal_tuple[0])
 # animal_tuple[0] = "hamster"                      # this will raise an error, because tuple is immutable, we cannot change the value of an element
@@ -39,9 +40,6 @@ print(animal_tuple[0])
 # try avoid this
 people = "Alice", "Bob"
 animals = "cat", "dog", "rabbit"
-
-
-
 
 
 print("======= UNPACKING ARGUMENTS =======")
@@ -61,6 +59,7 @@ def calculate(*args):
     print(f"the total value: {total}")
     return total
 
+
 # call
 calculate(1, 7, 2, 3)
 print("-"*10)
@@ -69,3 +68,13 @@ print("-"*10)
 calculate(5, 7)
 
 
+# **kwargs > dict
+def introduce(**kwargs):
+    print(f"the type(**kwargs) value: {type(kwargs)}")
+    print(f"Hi, I am {kwargs['name']}, I am {kwargs['age']} years old!")
+    pass
+
+
+# CALL
+introduce(name="SIMON", age=23)
+introduce(name="JUSTIN", age=30, single=True)
