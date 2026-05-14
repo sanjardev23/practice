@@ -38,10 +38,6 @@ print(f"the first and the last fruit: {c}")
 print(f"the last fruit: {d}")
 
 
-
-
-
-
 print("====== List methods ======")
 # methods > append() insert() pop() remove() clear() sort() reverse() count() index()
 
@@ -96,6 +92,31 @@ numbs = [5, 2, 4, 1, 3]
 new_numbs = sorted(numbs)      # sort in ascending order
 print(f"the sorted numbs: {numbs} and  new_numbs: {new_numbs}")
 
+
+print("======= Lambda functions =======")
+# lambda is small anonymous function
+def calculate(x, y): return x * y
+
+
+result = calculate(5, 7)
+print(f"the result: {result}")
+
+
+
+people = [
+    ("Robert", 25),
+    ("Alice", 30),
+    ("Bob", 20),
+    ("Charlie", 35)
+]
+# sort by name
+people.sort()
+print("people (1):", people)
+
+
+# sort by age via lambda
+people.sort(key=lambda person: person[1])
+print("people (2):", people)
 
 
 
