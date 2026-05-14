@@ -24,7 +24,9 @@ print(letters)
 
 fruits = ["apple", "banana", "cherry"]     # this is a list, made in literal way
 print("before fruits:", fruits)
+
 fruits[2] = "melon"                        # this is a list, mutable, we can change the value of an element
+print("after fruits:", fruits)
 
 
 animal_tuple = ("cat", "dog", "rabbit")         # this is a tuple, made in literal way
@@ -34,11 +36,36 @@ print(animal_tuple[0])
 # animal_tuple[0] = "hamster"                      # this will raise an error, because tuple is immutable, we cannot change the value of an element
 
 
+# try avoid this
+people = "Alice", "Bob"
+animals = "cat", "dog", "rabbit"
 
 
 
 
 
+print("======= UNPACKING ARGUMENTS =======")
+groups = ["MIT", "FLEXY", "DEVEX", "MG"]
+(x, y, *z) = groups
+print(f"x: {x}, y: {y}, z: {z}")
+print("z:", z)
 
+
+# *args > tuple
+def calculate(*args):
+    print("args >", args)
+    total = 1
+    for x in args:
+        total *= x
+    print(f"the type(args) value: {type(args)}")
+    print(f"the total value: {total}")
+    return total
+
+# call
+calculate(1, 7, 2, 3)
+print("-"*10)
+calculate(0, 2, 300)
+print("-"*10)
+calculate(5, 7)
 
 
