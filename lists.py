@@ -5,6 +5,10 @@
 (4) enumarate, mao and filter
 '''
 
+from operator import index
+
+
+
 print("======= LISTS =======")
 # Java/ PHP/ JS > Array => Python List
 
@@ -36,6 +40,10 @@ print(f"the first fruit: {a}")
 print(f"the first two fruits: {b}")
 print(f"the first and the last fruit: {c}")
 print(f"the last fruit: {d}")
+
+
+
+
 
 
 print("====== List methods ======")
@@ -102,7 +110,6 @@ result = calculate(5, 7)
 print(f"the result: {result}")
 
 
-
 people = [
     ("Robert", 25),
     ("Alice", 30),
@@ -117,6 +124,66 @@ print("people (1):", people)
 # sort by age via lambda
 people.sort(key=lambda person: person[1])
 print("people (2):", people)
+
+
+
+
+
+
+print("======= ENUMERATE, MAP and FILTER =======")
+# enumarate for index and value
+
+animals = ["dog", "cat", "fish"]
+for element in enumerate(animals):
+    print(f"the element: {element}")
+
+print("-"*10)
+for (index, value) in enumerate(animals):
+    print(f"the index: {index} and the value: {value}")
+
+
+# similar in dictionaries
+car_obj = dict(brand="BMW", model="X5", year=2020)
+result = car_obj.items()
+for (key, value) in result:
+    print(f"the key: {key} and the value: {value}")
+    
+    
+    
+    
+    
+    
+print("-"*10)
+# MAP
+cars = [
+    ("Ferrari", 2020),
+    ("Lamborghini", 2019),
+    ("Porsche", 2021),
+    ("BMW", 2018),
+    ("Pagani", 2022)
+]       
+
+new_cars = []
+for car in cars:
+    new_cars.append(car[0])
+print("new_cars (1):", new_cars)   # this is a old way
+    
+    
+result = map(lambda car: car[0], cars)       # new way with map and lambda
+print(f"the result: {result} and the type of result: {type(result)}")
+
+new_cars = list(result)
+print("new_cars (2):", new_cars)
+
+
+
+
+print("-"*10)
+# FILTER
+result_filter = filter(lambda car: car[1] >= 2020, cars)
+print(f"the result_filter: {result_filter} and the type of result: {type(result_filter)}")
+print(list(result_filter))
+
 
 
 
