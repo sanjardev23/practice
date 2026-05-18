@@ -12,12 +12,12 @@ print("===== Python Packages & Core Package =====")
 
 
 # Core package
-# t = turtle.Turtle()
+t = turtle.Turtle()
 
-# t.shape("turtle")
-# t.speed(2)
-# t.circle(150)
-# turtle.done()
+t.shape("turtle")
+t.speed(2)
+t.circle(150)
+turtle.done()
 
 
 my_file = open("material/message.txt", "r")    # opening the file in read mode "r"
@@ -63,5 +63,21 @@ with Image.open("material/logo.jpg") as img_obj:
     resized_img.show()
     resized_img.save("material/sample.png")
 
+
+
+
+
+print("===== Debugging =====")
+def get_summary(*args):   # DEFINE args = (1, 2, 3, 4, 5)
+    total_amount = 0
+
+    for a in args:
+        total_amount += a
+        return total_amount   # find the bug via debugging
+
+
+test = 100
+result = get_summary(1, 2, 3, 4, 5)   # CALL
+print("result:", result)
 
 
