@@ -5,7 +5,10 @@
 '''
 
 # array - katta data bilan ishlatiladi, kichigi bn list ishlatiladi
+# array ishlatish un import qilinadi
 from array import array
+print("===== Array ======")
+
 numbers = array("i", [1, 4, 5 , 7, 8, 41])
 print("numbers(1):", numbers)
 
