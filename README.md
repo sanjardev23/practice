@@ -33,5 +33,23 @@ Learning GIT and Python Foundation
 - List
 - Array
 - Comprehension
-- Debugging
+- Package & Debugging
 - ...
+
+
+## Pip commands:
+
+```
+windows pip | macOS pip3
+
+pip list                        # show all installed packages
+
+pip install pillow              # install Pillow package
+
+pip uninstall pillow            # remove Pillow package
+
+pip show pillow                 # show package info
+
+pip freeze > requirements.txt   # save all packages to requirements file
+
+```
