@@ -43,3 +43,25 @@ print("DONE")
 
 
 
+
+
+
+print("===== Package Manager & External Package =====")
+''' Package Manager 
+    Python > pip pipenv
+    NodeJS > npm yarn
+    PHP    > composer
+    MacOS  > brew
+'''
+# External Package -> https://pypi.org/
+
+ 
+from PIL import Image
+
+with Image.open("material/logo.jpg") as img_obj:
+    resized_img = img_obj.resize((200, 200))
+    resized_img.show()
+    resized_img.save("material/sample.png")
+
+
+
