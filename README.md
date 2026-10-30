@@ -53,3 +53,6 @@ pip show pillow                 # show package info
 pip freeze > requirements.txt   # save all packages to requirements file
 
 ```
+## Notes
+
+Practice repo for learning Python basics.
