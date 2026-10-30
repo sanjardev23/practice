@@ -56,3 +56,5 @@ pip freeze > requirements.txt   # save all packages to requirements file
 ## Notes
 
 Practice repo for learning Python basics.
+
+Run any example with `python <file>.py`.
